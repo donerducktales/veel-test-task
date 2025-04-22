@@ -9,7 +9,6 @@ export default function Create() {
    
    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
       e.preventDefault();
-      console.log(`usestate ${title}`)
 
       const data = await fetch('https://jsonplaceholder.typicode.com/todos');
       const parsedData = await data.json();
