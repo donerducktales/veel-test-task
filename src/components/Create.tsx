@@ -9,7 +9,6 @@ export default function Create() {
    
    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
       e.preventDefault();
-      console.log(`usestate ${title}`)
 
       const data = await fetch('https://jsonplaceholder.typicode.com/todos');
       const parsedData = await data.json();
@@ -48,7 +47,10 @@ export default function Create() {
                className='outline-none bg-white text-black max-w-96 w-full h-12 rounded-lg'
                onChange={(e) => setTitle(e.target.value)}
             />
-            <button className='bg-green-600 w-16 rounded-lg'>
+            <button 
+               className='bg-green-600 w-16 rounded-lg'
+               type="submit"
+            >
                create
             </button>
          </form>
